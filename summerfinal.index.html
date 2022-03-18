@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Woolly Star Farm</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+    <link href="C:\Users\13602\Documents\summerFinal\summerFinal.css" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <nav class="nav-section">
+        <div class="farm-name">Woolly Star Farm</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="C:\Users\13602\Documents\summerFinal\lambs\lambs.html">Lambs</a></li>
+                <li><a href="C:\Users\13602\Documents\summerFinal\pelts\pelts.html">Pelts</a></li>
+                <li><a href= "C:\Users\13602\Documents\summerFinal\paintings\paintings.html">Paintings</a></li>
+                <li><a href="C:\Users\13602\Documents\summerFinal\felted crafts\felt.html">Felted Crafts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--  Hero Section-->
+
+    <section class="hero-section">
+        <div class="hero-image">
+        </div>
+    </section>
+
+    <!--   About Section    -->
+
+    <div class="container">
+        <div class="about-container">
+            <h1 class="about-header">About</h1>
+            <p class="about-text">
+                Located on top of a hill in Allegany County, New York, Woolly Star Farm is the home to Icelandic Sheep
+                that are raised for fiber, pelts and meat. Icelandic Sheep are a primitive breed that have been bred in
+                the United States for about 30 years and are considered a multipurpose breed. The colors of their wool
+                (white, black and moorit) as well as their interesting patterns including spotting make this breed unique! Beyond our sheep, we
+                grow grow fruits, flowers and vegetables. For more information contact woollystarfarm@gmail.com
+            </p>
+        </div>
+
+        <!--  Slide show pictures     -->
+
+        <section class="carousel" aria-label="Gallery">
+            <ol class="carousel__viewport">
+                <li id="carousel__slide1"
+                    class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide4"
+                           class="carousel__prev">Go to last slide</a>
+                        <a href="#carousel__slide2"
+                           class="carousel__next">Go to next slide</a>
+                    </div>
+                </li>
+                <li id="carousel__slide2"
+                    class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide1"
+                       class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide3"
+                       class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide3"
+                    class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide2"
+                       class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide4"
+                       class="carousel__next">Go to next slide</a>
+                </li>
+                <li id="carousel__slide4"
+                    class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                    <a href="#carousel__slide3"
+                       class="carousel__prev">Go to previous slide</a>
+                    <a href="#carousel__slide1"
+                       class="carousel__next">Go to first slide</a>
+                </li>
+            </ol>
+            <aside class="carousel__navigation">
+                <ol class="carousel__navigation-list">
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide1"
+                           class="carousel__navigation-button">Go to slide 1</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide2"
+                           class="carousel__navigation-button">Go to slide 2</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide3"
+                           class="carousel__navigation-button">Go to slide 3</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                        <a href="#carousel__slide4"
+                           class="carousel__navigation-button">Go to slide 4</a>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+
+    </div>
+
+    <!--   QUIZ   -->
+
+    <div class="quiz-header">
+        <p>Test Your Sheep Knowledge</p>
+    </div>
+
+    <form id="quiz" name="quiz">
+        <p class="question">If a sheep is on their back, what shoud you do??</p>
+        <input type="radio" id="mc" name="question1" value="Find a farmer to help them roll over">Find a farmer to help them roll over<br>
+        <input type="radio" id="mc" name="question1" value="Nothing, it's probably sleeping">Nothing, it's probably sleeping<br>
+        <p class="question">Which U.S. president(s) raised sheep?</p>
+        <input type="radio" id="mc" name="question2" value="George Washington">George Washington<br>
+        <input type="radio" id="mc" name="question2" value="Thomas Jefferson">Thomas Jefferson<br>
+        <input type="radio" id="mc" name="question2" value="James Madison">James Madison<br>
+        <input type="radio" id="mc" name="question2" value="All of the above">All of the above<br>
+        <p class="question">The upper lip of a sheep has a pronounced groove dividing <br>the left and right side, called a philtrum</p>
+        <input type="radio" id="mc" name="question3" value="True">True<br>
+        <input type="radio" id="mc" name="question3" value="False">False<br>
+        <input type="button" id="complete" value="Submit">
+        <div id="after_submit">
+            <p id="num-correct"></p>
+            <p id="message"></p>
+        </div>
+    </form>
+  <script src="summerFinal.js"></script>
+</body>
+ 
+</html>

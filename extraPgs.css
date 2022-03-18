@@ -1,0 +1,102 @@
+* {
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: "Source Sans Pro", Ariel, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+  }
+
+body {
+    background-color: #1f364d;
+  }
+
+.nav-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.farm-name,
+.nav-links li a {
+    color: #eee6bb;
+}
+
+.farm-name {
+  font-size: 2.4rem;
+  margin: 0.5rem;
+  font-family: Anton;
+}
+
+
+
+.nav-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; 
+ 
+}
+
+.nav-links li a { 
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: Roboto;
+}
+
+.nav-links li:hover {
+  background-color:#3e5761; 
+}
+  
+.header h1, p {
+    text-align: center;
+    color: #eee6bb;
+  }
+
+.header h1 {
+  padding:2.4rem;
+  font-size: 2rem;
+  
+  }
+  
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

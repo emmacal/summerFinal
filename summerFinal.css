@@ -1,0 +1,462 @@
+﻿* {
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: "Source Sans Pro", Ariel, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1f364d;
+}
+
+@media screen and (max-width: 320px) {
+    * {
+        scrollbar-color: transparent transparent; /* thumb and track color */
+        scrollbar-width: none;
+    }
+}
+
+/*  Nav Styling  */
+
+.nav-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.farm-name,
+.navbar-links li a {
+    color: #eee6bb;
+}
+
+.farm-name {
+    font-size: 2.4rem;
+    margin: 0.5rem;
+    font-family: Anton;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    padding: 1rem;
+    font-family: Roboto;
+    display: block;
+    font-size: 1.6rem;
+}
+
+.navbar-links li:hover {
+    background-color:#3e5761; 
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: #eee6bb;
+        border-radius: 1px;
+    }
+
+@media (max-width: 420px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        .nav-section ul {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .nav-section li {
+            text-align: center;
+        }
+
+            .nav-section li a {
+                padding: 0.5rem 1rem;
+            }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Hero Styling  */
+
+.hero-image {
+    background-image: url("https://res.cloudinary.com/dludrcww1/image/upload/v1623428161/IMG_20201208_163302764_wsdspx.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 420px) {
+    .hero-image {
+        max-width: 100%;
+        height: 300px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/* About Styling */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.about-contianer {
+    position: relative;
+    bottom: 100px;
+}
+
+.about-header,
+.about-text {
+    color: #eee6bb;
+    padding-top: 20px;
+}
+
+.about-header {
+    text-align: center;
+    font-size: 2rem;
+    font-family: Anton;
+}
+
+.about-text {
+    width: 75%;
+    font-family: Roboto;
+    text-align: center;
+    margin: auto;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 420px) {
+    .about-text {
+        padding: 10px 0px 10px 0px;
+        margin-left: 39px;
+    }
+}
+
+/* Slideshow Styling  */
+
+@keyframes tonext {
+    75% {
+        left: 0;
+    }
+
+    95% {
+        left: 100%;
+    }
+
+    98% {
+        left: 100%;
+    }
+
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes tostart {
+    75% {
+        left: 0;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    98% {
+        left: -300%;
+    }
+
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+
+    97% {
+        scroll-snap-align: none;
+    }
+
+    99% {
+        scroll-snap-align: none;
+    }
+
+    100% {
+        scroll-snap-align: center;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+}
+
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel__slide:first-child {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-image: url("https://res.cloudinary.com/dludrcww1/image/upload/v1624111317/151269231_243516937360369_7345631162730085854_n_xgigrr.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel__slide:nth-child(2) {
+    background-image: url("https://res.cloudinary.com/dludrcww1/image/upload/v1623437651/IMG_20190211_181552_masfvz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.carousel__slide:nth-child(3) {
+    background-image: url("https://res.cloudinary.com/dludrcww1/image/upload/v1623437664/IMG_20201215_085833755_dn9kcu.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.carousel__slide:last-child {
+    background-image: url("https://res.cloudinary.com/dludrcww1/image/upload/v1623437682/IMG_20200813_185147017_i53hiv.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+}
+
+@media screen and (max-width: 420px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (hover: hover) {
+    .carousel__snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+        animation-name: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .carousel__snapper {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {
+    animation-name: none;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+    display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #eee6bb;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+}
+
+/* Quiz styling */
+
+.quiz-header p {
+    text-align: center;
+    padding: 30px;
+    font-size: 2.4rem;
+    color: #eee6bb;
+    font-family: Anton;
+}
+
+#quiz {
+    display: inline-block;
+    margin-left: 1%;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    color: #eee6bb;
+    font-size: 1.4rem;
+    text-align: center;
+    border: 5px solid #eee6bb;
+    font-family: Roboto;
+}
+
+.question {
+    padding: 20px 0px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: Roboto;
+}
+
+#after_submit {
+    width: 25%;
+    border-radius: 10px;
+    background-color: #c87f31;
+    visibility: hidden;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+    #after_submit p {
+        font-size: 2rem;
+        font-family: Roboto;
+    }
+
+#complete {
+    background: #c87f31;
+    border: none;
+    font-size: 1.6rem;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    font-family: Roboto;
+}
+
+@media (max-width: 420px) {
+    #quiz {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #after_submit {
+        width: 100%;
+    }
+}
